@@ -1,12 +1,26 @@
-var arr=[1,3,4] ;
+
 function NewUser(){
-	var obj={}
+	var user={}
 	
-obj.name=document.forms["myForm"]["full_name"].value;
-obj.email=document.forms["myForm"]["email"].value;
-obj.password=document.forms["myForm"]["psw"].value;
-arr.push(obj)
-console.log(arr)
-alert(arr)
-document.getElementById("name").textContent =obj.name
+user.name=document.forms["myForm"]["full_name"].value;
+user.email=document.forms["myForm"]["email"].value;
+user.password=document.forms["myForm"]["psw"].value;
+window.localStorage.setItem('user', JSON.stringify(user));
+window.localStorage.getItem('user');
+
+ var getUser = [];
+   var get =  JSON.parse(localStorage.getItem('user'));
+   getUser = [get];
+   getUser.push(user);
+console.log(JSON.stringify(getUser));
+   console.log(getUser);
+
+/*var getUser=[]
+getUser.push(JSON.parse(window.localStorage.getItem('user'));
+	localStorage.setItem('user', JSON.stringify(getUser));
+
+   */
+
+alert(getUser)
+
 }
