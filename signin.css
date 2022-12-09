@@ -2,6 +2,11 @@ body{
 background-image:url("images/plex-splash-screen-04-30-21-new-1536x864.png");
 background-size: cover;
 
+}*
+#logo{
+       position: absolute;
+    margin: -14px 0px 0px 29px;
+    width: 11%;
 }
 .img-gradient{
     
