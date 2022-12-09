@@ -4,142 +4,261 @@
 		<meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 36%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+  background-color: white;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="user.css"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
 		<script type="text/javascript" src="user.js"></script>
+    <script type="text/javascript" src="text.js"></script>
+
 </head>
 <body>
-  <header id="navbar">
-              <nav>
-                <img id="logo"src="images/1j.jpg">
-                
-                
-<h1>NETFLIX</h1>
-<div class="wrapper">
+<header id="headerr">
+<nav>
+  <img id="logo" src="images/1j.jpg">
+  <div id="join">
+<form class="example" >
+  <input  type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+</form>
 
-  <section id="section1">
-    <a href="#section3" class="arrow__btn left-arrow">‹</a>
-    <div class="item">
-      <a href="#">
-        <img
-          src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp"
-          alt="Describe Image">
+<form class="example" >
+ 
+  <button type="submit"><i class="fa fa-search"></i></button>
 
-          <h1 class="heading">Heading One</h1>
-          <p class="duration">Duration: 10 min</p>
-      </a>
-    </div>
-    <div class="item">
-
-      <a href="#">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg"
-        alt="Describe Image">
-        
-        <h1 class="heading">Heading One</h1>
-        <p class="duration">Duration: 10 min</p>
-        
-      </a>
-    </div>
-    <div class="item">
-      
-      <a href="#">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp"
-        alt="Describe Image">
-        <h1 class="heading">Heading One</h1>
-        <p class="duration">Duration: 10 min</p>
-      </a>
-    </div>
-    <div class="item">
-      <a href="#">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg"
-        alt="Describe Image">
-        
-        <h1 class="heading">Heading One</h1>
-        <p class="duration">Duration: 10 min</p>
-      </a>
-    </div>
-    <div class="item">
-      <a href="#">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABbcCX42tsqGbBvO2y9CQv5-7QvYbCfoHtXsuc6NPCtZaKa4l4fBX3XWvUwG9F2A3CTsNpHVmulxBbdXKwK8Q6xGjejd9FoadGkZ7CnGrSl601TOQjzSHJ23NuIPC8j0QMGORL4uRIA.jpg"
-        alt="Describe Image">
-        <h1 class="heading">Heading One</h1>
-        <p class="duration">Duration: 10 min</p>
-        </a>
-    </div>
-    <a href="#section2" class="arrow__btn right-arrow">›</a>
-  </section>
-
-  <section id="section2">
-    <a href="#section1" class="arrow__btn left-arrow">‹</a>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABVopDZ5Fy9_fk_HO5WxHTXKKjKhtWFupbSjuvPwfLK_vytzon4EwRUdGgYJ34JwPxOTK_NkV3aXfkULMB0Dcct-FyfqzH-X44VXuRMp4QeBHlvKwWeZFpZlGdItPzmmg4scmwhG7SQ.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTOj1-116yVcgKWMU2dI3GFR4x0fSkiGsqtLLeLUxRR7STaksjAqBTrYlTfrB8nIGnGvXksi0ewXAhVGg6-pLxpFOIfcpjK-pf8D5xehFZo5a6vJbo4L0AGbrzglbyUoq255QBJgRQ.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABd3IBDpxbRcHXvRMFCZeKa2aHLU1P4SJtrACMS9om3yhLjqPlvNlmR_fypPxjtbsbnKaC4JZhPSpDG4r_kdxSHHAltWguMcCB-1Y1OShr2zWfUv7Whf_39fNH5ZJ3_0gxQrs0akmQjQz44_LT7jXH5LMZ7iMBAzac5IEj4m7Fn_5OWEGYnVsDsKG-QTommDooULMDF9bEw.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABXSd7bhDddcwkq9XpksoQFCHVx29Sxl_h4hb2n3F2GIt32a4XWcOnctQfgnT5qdolv8UML6_xNB5CJ89h56wueb13mYmEBr0sx5e9iLPdtVcOQAOmKXKWHHXwFvJuCUwuNnL3s8eAQwqLXPVMHMEsujM684rUGrZNF2btN2GRy5-RyEslsxZO93V2Q_H2bWs8A8oayt1h5M.webp"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABbXWODpAWqVXcmmjMA7K-2mPkQpvwCLfSdeyhVXzR8A3MSpdSEnnjf4HEJJTYC-TnktU6njTUGAxmzWEYCaJbk4v_ZeL-7QGzmkvYBjg_N-evr2XmcX-Fanoyvu_nimFP4iigPe4O3Vr_WcgplhwkDrJwPUJa84wRLrNAx3TufN5V7cWRP4indqu5HQahvgFEqfL9zjp4g.jpg"
-        alt="Describe Image">
-    </div>
-    <a href="#section3" class="arrow__btn right-arrow">›</a>
-  </section>
-
-  <section id="section3">
-    <a href="#section2" class="arrow__btn left-arrow">‹</a>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRr4YxdaABuAuH_3FmSQZn7BCvLp-UUPsXE9MiYpvFP3CSUHV2zOew5oVqKqqdaOd3tbFVS0Uf67uIs7_eZydlCghg4nK0nMatRpPImABwTOhnNzCLCxdKrua7pPIcPCZqBYTeAO5g.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTyWK1MKaw8GcObtz47R2Tj7wkLJ7qQu9tk6TVpcoyxpzD4B-zZ569bQ5vGrREBL-MWFkGilXUwy7tCDaj2XOGkUB4RsbbFAmp9NgSr6lygMpUGNHSlyfrFbUORsRkrxSIoh_ggOvg.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABY7NwkWEJIfXsn6t3Li4bGSCQ1nEErPisI5ZZtXlC-_VRBZOUrhWK5X3vt3t6SR_cpgVhCwxgQqFFDJhk62Kk8hawOnYGZMr0LKeLczMFV2zalCFjkcdLksvT4HB2LEi6LFyruyk3Uu0LmNGsHfC2A8Bly60smr_3sDbz4RruXcklPOG1qYq9wUVu3zfaiwNvqmG4b8aFA.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABemXHOga9feFnOux6I2YyACBD94wvM7N3vcTGIfMpQ_BcaXeoeM9XyzdVdamKtxt0SHXZfvsl6czcp3E48tXMLtHBxuQsh1BjHtPGgJDZ81je_FjItINiqzLtir0A30s_e4KR8G3d7AYAPDjZVOY97bNpzNqtkcHcGp7fGnJByVCps1uLfG9U9tK3Ma1A_3JbRt0NiT2_Q.jpg"
-        alt="Describe Image">
-    </div>
-    <div class="item">
-      <img
-        src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg"
-        alt="Describe Image">
-    </div>
-
-
-    <a href="#section1" class="arrow__btn right-arrow">›</a>
-  </section>
+</form>
 </div>
-                    
-            </nav>
-    </header>
+  <div class="dropdown-content">
+    <a href="welcome.html">Home</a>
+    <a href="#popular">Drama</a>
+    <a href="#popular1">Reality</a>
+     
+
+    <a id="sign_out"href="welcome.html">Sign Out</a>
+  </div>
+
+<div class="name">
+    <img id="imgp" src="images/AAAABdcKoTlBhPX2u1BSyBgb5R3gHsRHb_b88ULY7k4LX-kSrkBaUT-HtdCsgdhOsUV3FoVIhjpiys_Mvy9WfsRKPJJPC8L0ewU.png">
+   <p id="namep">welcome Haifa</p>
+  
+  </div>
+  
+</div>
+</nav>
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="vedeos/videoplayback.webm" type="video/webm">
+ 
+</video>
+
+
+</header>
+
+<div class="h1-item1" >
+<h1 id="popular">Drama shows</h1>
+<div class="item1">
+
+  <a id="1" href="watchfilm1.html"><img src="images/drama/AAAABXX.jpg"
+          alt="Describe Image"></a>
+ 
+ <img
+        src="images/drama/AAAABd.jpg"
+        alt="Describe Image">
+  <img
+        src="images/drama/AAAABU.jpg"
+        alt="Describe Image">
+         <img src="images/drama/AAAABd6lU7.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+<div class="h1-item1">
+<h1 id="popular1">Reality TV</h1>
+<div id="2"  class="item1">
+
+  <img src="images/Reality TV/AAAABVB.jpg"
+          alt="Describe Image">
+ 
+ <img
+        src="images/Reality TV/AAAABe.jpg"
+        alt="Describe Image">
+  <img
+        src="images/Reality TV/AAAABdP_.jpg"
+        alt="Describe Image">
+         <img src="images/Reality TV/AAAABb8CacU-.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+<div class="h1-item1">
+<h1 id="popular">Kids & Family</h1>
+<div class="item1">
+
+  <img src="images/Kids & Family/AAAABXguLt2QTsXX5B76e8Mf1RZ9ohG654_iVK7aeDoK6D7Mu1Lj74RRk372Xa3eGEiCeN93V6kGadKlBrpi0vUDw2niZw03jol6Pta5weqe4DMix1O12fgzpeZzi5Hg0sCLeCb0.jpg"
+          alt="Describe Image">
+ 
+ <img
+        src="images/Kids & Family/AAAABUyhKMVbl0-URkgnTht0e2N8JBEhkRy1l8R7ocNFSaA5l96UCsf1mVKa666vFsV6Nj4683bULIYlucXt0DmEXzkGsUxx7MkbYuwcJUF4ySu3zQByBtI0IMMCVyGy2crEgSwg.jpg"
+        alt="Describe Image">
+  <img
+        src="images/Kids & Family/AAAABU-wIQ9cS_2L3eEd9pp2xk64a5b8lX2YH06EXCOn6na_bHd-f5Vzvlu5QpSuc13DEJY1JA84dOsKYKunlZlywrlp5RB1Pw0_SmcGIFKQIleosSvyVKelKSxQvUdEixrndfxw.jpg"
+        alt="Describe Image">
+         <img src="images/Kids & Family/AAAABQdQSDMYUl3_sg3Z7ShpQNvr76Ya61sIR1qVN73MENLRUdIJ9nUaNb4RJFtmc1ajQURtjVJ1gyhejBvMgnZW11EF79MFY54StxTAmS9HW1FpvWd8eVzJHMtblp58fQzuNLwI.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+
+<div class="h1-item1">
+<h1 id="popular">Action</h1>
+<div class="item1">
+
+  <img src="images/action/AAAABYdTP2NTbq8cSAExJrvrGygZ-N8hOND8_IQ4R9HfFV4r9wBnBvpMErxGAWyTNnjH6h09vLPACDXi6E8c6gQibUhSFLxzGAmahTOfqGL_u5x7MpMjxJRLuKazd_U46x3wAPD3.jpg"
+          alt="Describe Image">
+ 
+ <img
+        src="images/action/AAAABX15DgRQtlCEaPXHfJNcpApNVYdrHq5UoOyPEFs8nYv1NsBX_GIVEhUSrBzq6DgAATtLr6M6W9ewjGTSksZUVpQWLaf9jRwhUnlsmExt5eM9wqd8Wdp_AvxyH6E-kRdm6itp.jpg"
+        alt="Describe Image">
+  <img
+        src="images/action/AAAABRTdlG1Ur46dhSzTwLnQt1uMUPgvexbjfzvCi23Ao54g_NEQW3IBs1ZCNurfCTK2VyR8NvkvsPQqePD2WwSgga-HUQXa8ziFO14yHwk5GGrlGbzhcR0XfRj6dpf6K1vChR1a.jpg"
+        alt="Describe Image">
+         <img src="images/action/AAAABdFyLx5cPqaJdjFjC3BkjWYTOYSYuWtn6slq3zTTpI4Dph4dnjT6BV29tKAc70aRDggDOQZp_VMSFWnizzKpmXh-O5Fq75gwkuMKPxUQgS2KJoK3IZ64-pqrgP3R06Kv-MWK.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="h1-item1">
+<h1 id="popular">Fiction</h1>
+<div class="item1">
+
+  <img src="images/fiction/AAAABbcZvz3W-60eLDv5IEWWo566qbkV7sf_m4K0i7svVoKXs6vC9zwWHra5KCzyZ60J8F0jRYbHyvk-uaW146dni7hP6FEW1Z5MpT43U1WzlJzpEabiNKsB3XuBeKc1kcZdL7c3.jpg"
+          alt="Describe Image">
+ 
+ <img
+        src="images/fiction/AAAABcwXKJmMJ7xB-k9UPhAS-TE3TA_zljANEIkPhsGI0_agbS9uO9c8FvZ1iPHqv_Q2982TOtGHR3wtE_ALv1MfjY76gi4z23SHk4FKtOipcqWxzVmhuOIWi5olP2U3leGy2b5M.jpg"
+        alt="Describe Image">
+  <img
+        src="images/fiction/AAAABQa6lGAqwngIY1FCtjbnARPt7wvaCo3HReEhLpvajmcNWSF1CQqz4C74sv8N3cEGaKNjnsrWdNm8q0G1Jnku9NGiM_FAQ4amiL1qJGDBkSHrv5XEAMdA6roHTSQb6DHE8V53.jpg"
+        alt="Describe Image">
+         <img src="images/fiction/AAAABYqLlQ8sq_kcaK8A32OBUC7jJSI4yB0ydXFCdtJSUhBtrEYZoz9KfnxP4B7F1EvqI-uF1aWBg8GeLGH27u70kaJQim_NKib-c1v3XcswlZngMqSQ1GYfOVOPQFH5Ycm7YOiI.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+
+<div class="h1-item1">
+<h1 id="popular">Sport</h1>
+<div class="item1">
+
+  <img src="images/sport/AAAABazpt-vSwQvS714dt9n5jEqJjk2BKUx7Fne-oyXd-NYoj22e6gwulik2tU5Amyh5lQDRb7okEKGDzoYKHR-vWlpLUFeKDJQ9vHGwLuJMMsF0gAiPGs4Ob8twll96-DaGMcUj.jpg"
+          alt="Describe Image">
+ 
+ <img
+        src="images/sport/AAAABU8qO8jhMs-Bo7pdJ7VMJtTsBI0iepnY4yfn3JNKhfdo352T1f3LqBQiDCAkYzywkvf5T0Wgw2HKYR7Gqk_hN3F62lLf1ll9EQBRcEzuJtjDnpMxyQsmH-WqsLZxDtlmK4N2.jpg"
+        alt="Describe Image">
+  <img
+        src="images/sport/AAAABV4wu_zHoqq0LfLJ16_UwQRwVpp8DMVfjdFezLi43Aqiuo8ZuzBme9eGpw1KzVBWbEuYNIT8Dh09SOJsxBFFnhFjHqDY-XyB9AIPaRf4Adm093pHdKb0kgCfZNvsOXTyxKtM.jpg"
+        alt="Describe Image">
+         <img src="images/sport/AAAABYHybZOTxbS_rZYYUIAatEKaSXVx1pO2s3NM5aV866-K9AqsROYog7ZOzLN1w1dbhciCat2IJQyX0HBf2EFdmEb7QL-Uwhv0lnka7aOJf_xQx8LciQkksItIdakMjxc-3sKK.jpg"
+          alt="Describe Image">
+ 
+
+
+</div>
+</div>
+
+
+<center>
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Name</th>
+    <th style="width:20%;">cover</th>
+  </tr>
+  <tr>
+    <td>graneo fibril</td>
+    <td><a id="1" href="watchfilm1.html"><img src="images/drama/AAAABXX.jpg"
+          alt="Describe Image"></a></td>
+  </tr>
+  <tr>
+
+    <td>Glow up</td>
+    <td><a id="1" href="watchfilm1.html"><img
+        src="images/Reality TV/AAAABdP_.jpg"
+        alt="Describe Image"></a></td>
+  </tr>
+  <tr>
+    <td>Garra</td>
+    <td><a id="1" href="watchfilm1.html">  <img src="images/sport/AAAABYHybZOTxbS_rZYYUIAatEKaSXVx1pO2s3NM5aV866-K9AqsROYog7ZOzLN1w1dbhciCat2IJQyX0HBf2EFdmEb7QL-Uwhv0lnka7aOJf_xQx8LciQkksItIdakMjxc-3sKK.jpg"
+          alt="Describe Image"></a></td>
+  </tr>
+  
+</table>
+</center>
+<script>
+  $("#myTable").hide();
+</script>
+
+
 
 
 
